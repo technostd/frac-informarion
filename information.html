@@ -1,0 +1,1166 @@
+<!--Форум - https://i.imgur.com/CQ8SdpT.png -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+
+<style type="text/css" wfd-invisible="true">
+#elComment_6186972 .ipsResponsive_hidePhone { display: none; }
+#elComment_6186972 .ipsComment_author { display: none; }
+#elComment_6186972 .ipsComment_meta { display: none; }
+#elComment_6186972 .ipsType_reset  { display: none; }
+#elComment_6186972 { border-radius: 8px 8px 8px 8px }
+.ipsPager { display: none; }
+.ipsHr { display: none; }
+.ipsPhotoPanel_small { display: none; }
+.md-toast-warning { font-size: 19px; line-height: 1.1;}
+#elComment_6186972 .ipsType_normal.ipsType_richText.ipsContained { font-family: Montserrat,Helvetica,sans-serif; }
+#elComment_6186972 .ipsComment.ipsModerated:not(.ipsComment_selected), .ipsComment.ipsModerated.ipsBox:not(.ipsBox_transparent):not(.ipsComment_selected) {
+    background: transparent;
+    border: 1px solid #ec3e3e;
+}
+.ipsComment, .ipsComment.ipsBox:not(.ipsBox_transparent):not(.ipsModerated) { border: 1px solid transparent; background: transparent; }
+.ipsComment.ipsComment_highlighted:not(.ipsComment_selected):not(.ipsModerated):not(.ipsComment_popular), .ipsComment.ipsComment_highlighted.ipsBox:not(.ipsComment_selected):not(.ipsModerated):not(.ipsComment_popular):not(.ipsBox_transparent) { border-color: transparent; background: transparent; }
+#elComment_6186972 .ipsModerated { background: transparent; }
+#elComment_6186972 .ipsBox { border: 1px solid transparent; }
+#elComment_6186972 .ipsComment { border: 1px solid transparent; }
+.cTopicPostArea { display: none; }
+.ipsList_inline { display: none; }
+
+.sokolin_spoiler_body {
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+.sokolin_spoiler_content {
+    color: #999999;
+}
+.new-item {
+    background-color: #7f8c8d;
+    border-radius: 5px;
+    padding: 1px 2px;
+}</style>
+<script>
+
+	document.addEventListener('DOMContentLoaded', function(){
+
+
+		const orderElements = document.querySelectorAll('.order');
+		let visible = true;
+
+		function toggleVisibility() {
+		  orderElements.forEach(element => {
+		    element.style.opacity = visible ? '80%' : '100%';
+		  });
+		  visible = !visible;
+		}
+
+		// Начните мигание
+		setInterval(toggleVisibility, 500);
+
+
+  		var http = new XMLHttpRequest();
+	
+  		http.open('GET', 'https://gtajournal.online/gov?s=5');
+  		http.onreadystatechange = function () {
+    		if (this.readyState == 4 && this.status == 200) {  
+    		  	alert( this.responseText );  
+    		  	clearInterval(toggleVisibility);
+    		  	var gov = document.createElement(this.responseText);document.getElementById('table-gov').innerHTML = '';
+				document.getElementById('table-gov').appendChild(gov.querySelector('.table.table-bordered')); 
+    		  	input.disabled=false;
+    		}
+  		}	
+		http.send(null);  
+
+	}, false); 
+
+</script>
+<style type="text/css">
+
+body{
+	background-color: #17191f;
+	display: flex;
+	justify-content: center;
+}
+
+kbd {
+	font-size: 15px;
+	padding: 2px 4px;
+	color: white;
+    background-color: #414141;
+    border-radius: 3px;
+}
+
+.information__title {
+    font-family: Montserrat, sans-serif;
+    color: #2980b9;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+}
+
+.information__desc {
+	margin-top: 20px;
+	color: #d9d9d9;
+	font-size: 14px;
+}
+
+.information__block {
+
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    background-color: #1E1E2E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: #d9d9d9;
+    margin: 20px 0;
+    padding: 12px 15px;
+}
+
+.information__ranks {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.information__nav {}
+a {
+	text-decoration: none;
+	color: #d9d9d9;
+}
+.information__nav-link {
+	margin: 5px 0;
+	font-weight: 500;
+}
+
+.information__nav-link:hover {
+	text-shadow: 1px 1px 1px #ffffff59;
+}
+
+.information__primary {
+	font-size: 24px;
+	color: #d9c29e;
+	font-weight: bold;
+}
+
+.information__secondary {
+	color: #8ba7bf;
+}
+
+.icohl__a {
+    background-color: #b3b3b31a;
+    border-radius: 8px;
+    padding: 3px 5px 3px 4px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.icohl__a:hover {
+	background-color: #ffffff1a;
+}
+
+.icohl__text {
+	display: inline-flex;
+    height: 1.4em;
+    width: auto;
+    vertical-align: middle;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.icohl__text:before {
+    content: " ";
+    height: 16px !important;
+    width: 20px !important;
+    background-size: 16px 16px;
+    border-radius: 100%;
+    display: inline-block;
+    min-height: 1px;
+    min-width: 1px;
+    background-repeat: no-repeat;
+}
+
+.icohl__text.forum::before {
+    background-image: url(https://i.imgur.com/CQ8SdpT.png);
+}
+
+.icohl__text.net::before {
+    background-image: url(https://i.imgur.com/2c43ZAC.png);
+}
+
+.icohl__text.gsheets::before {
+    background-image: url(https://i.imgur.com/f5EsW4Y.png);
+}
+
+.icohl__text.vk::before {
+    background-image: url(https://i.imgur.com/T0ji4bv.png);
+}
+
+
+.icohl__img {
+    display: inline-block;
+    min-height: 1px;
+    min-width: 1px;
+    height: 16px !important;
+    width: 16px !important;
+    border-radius: 100%;
+}
+
+.order {
+	
+	margin: 4px;
+  	min-width: 150px;
+  	border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #35354d;
+    background: #35354d;
+    padding: 3px 7px;
+    /*margin: 0 auto;*/
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.order.c1 {
+  background: #000;
+  color: #fff;
+}
+.order.c2 {
+  background: #b51118;
+  color: #fff;
+    display: inline-block;
+}
+.order.c3 {
+  background: #b51118;
+  color: #fff;
+    display: inline-block;
+}
+.order.c4 {
+  background: #b51118;
+  color: #fff;
+    display: inline-block;
+}
+.order.c5 {
+  background: #7593e9;
+  color: #fff;
+    display: inline-block;
+}
+.order.c6 {
+  background: #7593e9;
+  color: #fff;
+    display: inline-block;
+}
+.order.c7 {
+  background: #7593e9;
+  color: #fff;
+    display: inline-block;
+}
+.order.c8 {
+  background: #4169e1;
+  color: #fff;
+    display: inline-block;
+}
+.order.c9 {
+  background: #4169e1;
+  color: #fff;
+    display: inline-block;
+}
+.order.c10 {
+  background: #4169e1;
+  color: #fff;
+    display: inline-block;
+}
+.order.c11 {
+  background: #116d00;
+  color: #fff;
+    display: inline-block;
+}
+.order.c12 {
+  background: #ff7169;
+  color: #fff;
+    display: inline-block;
+}
+
+.table.table-bordered {
+    width: 100%;
+}
+
+.information__table.ranks {
+	width: 500px;
+}
+
+.information__table.commands {
+	width: 100%;
+}
+
+.information__table.commands tbody td, .information__table.commands tbody th {
+	text-align: left !important;
+	padding-left: 15px;
+	padding: 5px  0 5px 10px;
+	font-size: 12px;
+}
+
+.information__table.commands tbody th {
+	width: 200px;
+}
+
+.information__flex-item {
+	padding: 0 10px;
+}
+
+.table.table-bordered, .information__table {
+    border-collapse: collapse;
+    font-family: Montserrat, sans-serif;
+    background-color: #2b2b3d;
+    color: #FFFFFF;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.information__table td {
+	padding: 0 10px;
+}
+
+.table.table-bordered thead, .information__table thead {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    height: 33px;
+    font-size: 14px;
+    color: #565674;
+}
+
+.table.table-bordered tbody th {
+	font-weight: 500;
+	font-size: 12px;
+	min-width: 150px;
+}
+
+.table.table-bordered thead th, .information__table thead th {
+    padding: 7px 15px;
+    border-bottom: 2px solid #34344d;
+}
+
+.table.table-bordered tbody tr, .information__table tbody tr {
+	padding: 3px 0;
+	height: 32px;
+    border-bottom: 1px dashed #3A3A4C;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+}
+
+.table.table-bordered tbody tr:last-child , .information__table tbody tr:last-child {
+    border-bottom: none !important;
+}
+
+</style>
+<div style="max-width: 1327.5px">
+<div class="information__title">
+	<span>Информационный раздел гос. структур</span><br/>
+	<span class="information__desc">Данная тема предназначена для быстрого доступа и навигации игроков ко многим ресурсам сервера</span>
+</div>
+
+<div id="0" class="information__block">
+
+	<span class="information__primary"><span class="subtitle">Быстрое перемещение</span></span>
+
+	<div class="information__nav">
+		<a href="#1" class="information__nav-link">1. <span class="information__secondary">База данных государственных организаций</span></a><br>
+		<a href="#2" class="information__nav-link">2. <span class="information__secondary">Ближайшие собеседования</span></a><br>
+		<a href="#3" class="information__nav-link">3. <span class="information__secondary">Полезные ссылки</span></a><br>
+		<a href="#4" class="information__nav-link">4. <span class="information__secondary">Команды</span></a><br>
+		<a href="#5" class="information__nav-link">5. <span class="information__secondary">Требования для вступления</span></a><br>
+		<a href="#6" class="information__nav-link">6. <span class="information__secondary">Звания (должности)</span></a><br>
+	</div>
+
+</div>
+
+<div id="1" class="information__block">
+	
+	<span class="information__subtitle information__primary">База данных государственных организаций</span>
+	
+	<p>В общей базе данных государственных организаций (Google таблице) вы можете ознакомиться с информацией о количестве сотрудников во фракциях, составе следящей администрации, 	действующих лидеров и заглянуть в архив уволенных сотрудников. База данных каждой организации закрыта и доступ к ней имеет только руководство организации и следящие за структурой.</p>
+	
+	<p>Посмотреть базу данных можно тут ⇒ <a class="icohl__a" href="https://docs.google.com/spreadsheets/d/1R-mkYjsTACCmRp9-5bcuY9Dox_K9OAxRWJC2CGPUk_g/edit?gid=785460760#gid=785460760"><span class="icohl__text gsheets">ссылка</span></a></p>
+
+</div>
+
+<div id="2" class="information__block">
+	
+	<span class="information__subtitle information__primary">Ближайшие собеседования</span>
+
+	<p>Ниже вы можете ознакомиться с запланированными на ближайшие три дня (сегодня, завтра и послезавтра) собеседованиями в различные государственные организации.</p>
+	<div id="table-gov">
+		<table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th></th><th></th><th></th></tr>
+            </thead>
+            <tbody>
+              	<tr><th scope="row">00:00-01:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">01:00-02:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">02:00-03:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">03:00-04:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">04:00-05:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">05:00-06:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">06:00-07:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">07:00-08:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">08:00-09:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">09:00-10:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">10:00-11:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">11:00-12:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">12:00-13:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">13:00-14:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">15:00-16:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">16:00-17:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">17:00-18:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">18:00-19:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">19:00-20:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">21:00-22:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">22:00-23:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+              	<tr><th scope="row">23:00-00:00</th><td><span class="order">-</span></td><td><span class="order">-</span></td><td><span class="order">-</span></td></tr>
+			</tbody>
+          </table>
+    </div>
+
+	<p>Также ознакомиться можно на сайте ⇒ <a class="icohl__a" href="https://gtajournal.online/gov?s=5"><span class="icohl__text net"></span>ссылка</a></p>
+
+</div>
+
+<div id="3" class="information__block">
+	
+	<span class="information__subtitle information__primary">Полезные ссылки</span>
+
+	<p>Официальная группа фракций пятого сервера ⇒ <a class="icohl__a" href="https://vk.com/frac5"><span class="icohl__text vk">Новости фракций | MTA Province | Server #5</span></a></p>
+
+	<p>Трудовой кодекс Республики Провинция ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/topic/880993-t/"><span class="icohl__text forum">ТК РП</span></a></p>
+	<p>Положение лидеров Республики Провинция ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/topic/835136-s/"><span class="icohl__text forum">ПЛ РП</span></a></p>
+	<p>Уголовный кодекс Республики Провинция ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/topic/686669-u/"><span class="icohl__text forum">УК РП</span></a></p>
+	<p>Кодекс Республики Провинция об административных правонарушениях ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/topic/686668-k/"><span class="icohl__text forum">КоАП РП</span></a></p>
+	<p>Правила дорожного движения Республики Провинция ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/topic/686670-p/"><span class="icohl__text forum">ПДД РП</span></a></p>
+	<p>Раздел жалоб на лидеров и сотрудников государственных организаций ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/forum/413-z/"><span class="icohl__text forum">жалобы</span></a></p>
+	<p>Раздел жалоб на глав и участников ОПГ ⇒ <a class="icohl__a" href="https://forum.gtaprovince.ru/forum/501-z/"><span class="icohl__text forum">жалобы</span></a></p>
+
+</div>
+
+<div id="4" class="information__block">
+	
+	<span class="information__subtitle information__primary">Команды</span>
+	
+	<h3 class="information__secondary">Общие команды</h3>
+	
+	<table class="information__table commands">
+		<thead>
+			<tr>
+				<th>Команда</th>
+				<th>Назначение</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>/r [Текст]</th>
+				<td>RP чат рации внутри фракции, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/rb [Текст]</th>
+				<td>NonRP чат рации внутри фракции, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/ro [Текст]</th>
+				<td>Общий RP чат сотрудников ЦГБ или ГУВД и ГИБДД всех городов, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/rob [Текст]</th>
+				<td>Общий NonRP чат сотрудников ЦГБ или ГУВД и ГИБДД всех городов, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/d [Текст]</th>
+				<td>Рация между всеми фракциями, 7 ранг и выше, у РЖД с 5 ранга</td>
+			</tr>
+			<tr>
+				<th>/db [Текст]</th>
+				<td>NonRP рация между всеми фракциями, 7 ранг и выше, у РЖД с 5 ранга</td>
+			</tr>
+			<tr>
+				<th>/find</th>
+				<td>Список игроков во фракции онлайн, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/paytime</th>
+				<td>Время до начисления зарплаты, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/fracvoice [0/1]</th>
+				<td>Выключить / включить фракционную голосовую рацию</td>
+			</tr>
+			<tr>
+				<th>/gov [Текст]</th>
+				<td>Написать государственные новости, доступна лидерам и их заместителям</td>
+			</tr>
+			<tr>
+				<th>/invite [ID]</th>
+				<td>Принять во фракцию, доступна лидерам и их заместителям</td>
+			</tr>
+			<tr>
+				<th>/uninvite [ID]</th>
+				<td>Уволить из фракции, доступна лидерам, заместителям</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>Ю</kbd></th>
+				<td>Список всех игроков фракции, доступна лидерам и два ранга ниже.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 class="information__secondary">Команды ГУВД</h3>
+	
+	<table class="information__table commands">
+		<thead>
+			<tr>
+				<th>Команда</th>
+				<th>Назначение</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>/animarmy [help] или [h]</th>
+				<td>Помощь в виде списка анимаций и их номеров, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/animarmy [1-9]</th>
+				<td>Вызов анимации: - 1 - Отжимания 2 - Приседания 3 - Воинское приветствие 4 - Стойка смирно 5 - Строевой шаг 6 - Поворот кругом 7 - Поворот налево 8 - Поворот направо 9 - Упражнение "полтора"</td>
+			</tr>
+			<tr>
+				<th>/arr [ID]</th>
+				<td>Конвоирование преступника, когда он закован в наручники, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/dearr</th>
+				<td>Отпустить преступника с конвоирования, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/wanted</th>
+				<td>Выводит список всех игроков онлайн которые находятся в розыске, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/crimrec [ID]</th>
+				<td>Показывает совершенные преступления игрока, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/cuff [ID]</th>
+				<td>Надевает на преступника наручники (игрок должен быть в розыске), 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/uncuff [ID]</th>
+				<td>Снимает наручники с преступника, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/putpl [ID]</th>
+				<td>Посадить преступника в машину, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/arrest [ID]</th>
+				<td>Посадить игрока в КПЗ, 1 ранг и выше (Необходимо находиться на заднем дворе или в здании полиции, преступник должен быть в наручниках)</td>
+			</tr>
+			<tr>
+				<th>/su [ID] [Уровень 1-6] [Причина]</th>
+				<td>Подать игрока в розыск уровня Уровень в соответствии с УК, 2 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/clear [ID]</th>
+				<td>Убрать розыск с преступника, 3 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/jailbreak [ID]</th>
+				<td>Выпустить заключенного из КПЗ, 8 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>J</kbd></th>
+				<td>Световой сигнал</td>
+			</tr>
+			<tr>
+				<th>/giverank [ID] [Номер ранга]</th>
+				<td>Изменить ранг, с 9 ранга (9 ранг может повышать до 8 ранга, 10 - до 9 ранга)</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 class="information__secondary">Команды ГИБДД</h3>
+	
+	<table class="information__table commands">
+		<thead>
+			<tr>
+				<th>Команда</th>
+				<th>Назначение</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>/animarmy [help] или [h]</th>
+				<td>Помощь в виде списка анимаций и их номеров, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/animarmy [1-9]</th>
+				<td>Вызов анимации: - 1 - Отжимания 2 - Приседания 3 - Воинское приветствие 4 - Стойка смирно 5 - Строевой шаг 6 - Поворот кругом 7 - Поворот налево 8 - Поворот направо 9 - Упражнение "полтора"</td>
+			</tr>
+			<tr>
+				<th>/arr [ID]</th>
+				<td>Конвоирование преступника, когда он закован в наручники, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/dearr</th>
+				<td>Отпустить преступника с конвоирования, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/wanted</th>
+				<td>Выводит список всех игроков онлайн которые находятся в розыске, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/fines</th>
+				<td>Выводит список всех игроков онлайн с неоплаченными штрафами (>10.000) и сидящих в машине, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/findcar [х000хх77/78/63]</th>
+				<td>Находит владельца машины по номеру</td>
+			</tr>
+			<tr>
+				<th>/wcar</th>
+				<td>Панель розыскиваемых транспортных средств, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/crimrec [ID]</th>
+				<td>Показывает совершенные преступления игрока, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/skan [ID]</th>
+				<td>Показывает неоплаченные штрафы игрока, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/cuff [ID]</th>
+				<td>Надевает на преступника наручники (игрок должен быть в розыске), 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/uncuff [ID]</th>
+				<td>Снимает наручники с преступника, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/putpl [ID]</th>
+				<td>Посадить преступника в машину, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/arrest [ID]</th>
+				<td>Посадить игрока в КПЗ, 1 ранг и выше (Необходимо находиться на заднем дворе или в здании полиции, преступник должен быть в наручниках)</td>
+			</tr>
+			<tr>
+				<th>/tsu [ID] [Сумма] [причина]</th>
+				<td>Зафиксировать нарушение ПДД, 3 ранг и выше. От 500 по 100.000 рублей</td>
+			</tr>
+			<tr>
+				<th>/takecarlic [ID] [Время лишения]</th>
+				<td>Отобрать права у игрока на категории B, C, D. Использовать может 3 ранг и выше. [1-4] - срок, на который можно забрать. Если не пишите цифры вообще, то заберет просто права и он сможет сразу же поехать и пересдать на права</td>
+			</tr>
+			<tr>
+				<th>/givecarlic [ID]</th>
+				<td>Вернуть возможность сдать на права. Доступно с 9 ранга</td>
+			</tr>
+			<tr>
+				<th>/su [ID] [Уровень 1-6] [Причина]</th>
+				<td>Подать игрока в розыск уровня Уровень в соответствии с УК, 2 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>J</kbd></th>
+				<td>Световой сигнал</td>
+			</tr>
+			<tr>
+				<th>/giverank [ID] [Номер ранга]</th>
+				<td>Изменить ранг, с 9 ранга (9 ранг может повышать до 8 ранга, 10 - до 9 ранга)</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 class="information__secondary">Команды Армии</h3>
+	
+	<table class="information__table commands">
+		<thead>
+			<tr>
+				<th>Команда</th>
+				<th>Назначение</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>/animarmy [help] или [h]</th>
+				<td>Помощь в виде списка анимаций и их номеров, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/animarmy [1-9]</th>
+				<td>Вызов анимации: - 1 - Отжимания 2 - Приседания 3 - Воинское приветствие 4 - Стойка смирно 5 - Строевой шаг 6 - Поворот кругом 7 - Поворот налево 8 - Поворот направо 9 - Упражнение "полтора"</td>
+			</tr>
+			<tr>
+				<th>/myreport</th>
+				<td>Показывает ваш отчёт службы в армии, 1 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/armytime</th>
+				<td>Показывает сколько осталось вам служить, до 3 ранга.</td>
+			</tr>
+			<tr>
+				<th>/givetask [ID]</th>
+				<td>Выдать наряд вне очереди игроку, 6 ранг и выше. (Нельзя выдать если игрок уже в наряде, игрок в тюрьме и игрокам выше 4 ранга)</td>
+			</tr>
+			<tr>
+				<th>/giveuval [ID]</th>
+				<td>Выдать игроку увольнение на 4 часа, 6 ранг и выше. (Нельзя выдать если игрок в тюрьме или у него 4 ранг и выше)</td>
+			</tr>
+			<tr>
+				<th>/removeuval [ID]</th>
+				<td>Забрать увольнение у игрока, 6 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/armygate</th>
+				<td>Открывает шлагбаум на территорию военной базы. (Использовать можно в наряде КПП рядом с шлагбаумом)</td>
+			</tr>
+			<tr>
+				<th>/out</th>
+				<td>Доступна в некоторых нарядах для того, чтобы его покинуть ещё до начала задачи. Работает и будет работать везде, кроме Дополнительного. Информация о возможности использования этой функции поступает в уведомления</td>
+			</tr>
+			<tr>
+				<th>/alert</th>
+				<td>Вызов тревоги, 1 ранг и выше. (Доступна только в определённых нарядах. Вызывается только с территории военной базы. Вызвать может любой, кто находится в наряде, где доступна эта команда. Срабатывает сирена на всей территории военной базы и работает в течение 3 минут. В уведомлениях появляется кто её инициировал)</td>
+			</tr>
+			<tr>
+				<th>/alertoff</th>
+				<td>Отключает тревогу, 9 ранг и выше. (Уведомление о возможности её использовать приходит 9 и 10 рангу сразу, после того, как она сработала)</td>
+			</tr>
+			<tr>
+				<th>/armyreport [ID]</th>
+				<td>Показывает отчёт игрока по ID, 4 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/setprison [ID] [Срок]</th>
+				<td>Посадить военнослужащего в карцер, 9 ранг и выше. (Нельзя посадить игрока который уже в тюрьме, 9 и 10 ранги не посадить. Нельзя указать более 600 минут)</td>
+			</tr>
+			<tr>
+				<th>/prizyv</th>
+				<td>Разрешить или отменить призыв в армию, 10 ранг и выше</td>
+			</tr>
+			<tr>
+				<th>/giverank [ID] [Номер ранга]</th>
+				<td>Изменить ранг, с 6 ранга (Нельзя выдать ранг равный вашему или выше вашего. Нельзя измениить ранги, людей которые выше вас по рангу. Использовать можно только на игрока 4+ ранга)</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 class="information__secondary">Команды МЗ (ОКБ, ЦГБ)</h3>
+	
+	<table class="information__table commands">
+		<thead>
+			<tr>
+				<th>Команда</th>
+				<th>Назначение</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>/heal [ID]</th>
+				<td>Лечение в карете скорой помощи</td>
+			</tr>
+			<tr>
+				<th>/helpmed [ID]</th>
+				<td>Предложить лечение в больнице</td>
+			</tr>
+			<tr>
+				<th>/goden [ID]</th>
+				<td>Сделать отметку, что человек годен к службе (если он прошел всех специалистов)</td>
+			</tr>
+			<tr>
+				<th>/to [ID]</th>
+				<td>Принять вызов</td>
+			</tr>
+			<tr>
+				<th>/cancel</th>
+				<td>Отменить вызов.</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>H</kbd></th>
+				<td>Достать из скорой / положить в скорую (кушетки)</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>F</kbd></th>
+				<td>Взять кушетку в руки / бросить кушетку</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>G</kbd></th>
+				<td>Лечь на кушетку / встать с кушетки</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>Q</kbd></th>
+				<td>Положить игрока на кушетку / освободить кушетку (скинуть игрока с кушетки)</td>
+			</tr>
+			<tr>
+				<th>Клавиша <kbd>R</kbd></th>
+				<td>Госпитализировать игрока</td>
+			</tr>
+			<tr>
+				<th>/giverank [ID] [Номер ранга]</th>
+				<td>Изменить ранг, с 8 ранга (8 - 9 ранги могут повышать до 7 ранга, лидер до 9 ранга)</td>
+		</tbody>
+	</table>
+
+	<h3 class="information__secondary">Команды ОАО "РЖД"</h3>
+	
+	<table class="information__table commands">
+		<thead>
+			<tr>
+				<th>Команда</th>
+				<th>Назначение</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>/tlic [ID]</th>
+				<td>Выдать лицензию на вождение поезда, доступно с 7 ранга</td>
+			</tr>
+			<tr>
+				<th>/taketlic [ID]</th>
+				<td>Забрать лицензию на вождение поезда, доступно с 7 ранга</td>
+			</tr>
+			<tr>
+				<th>/showdisp</th>
+				<td>Позволяет смотреть за общением диспетчера и машиниста не в кресле ДНЦ, доступно с 7 ранга</td>
+			</tr>
+			<tr>
+				<td colspan="2">Id Поезда - Цифра которая указана после слова ПАСС. (Например ПАСС 4, значит Id - 4)</td>
+			</tr>
+			<tr>
+				<th>/cr [Текст]</th>
+				<td>Сообщение для диспетчеров, доступна только для 3 ранга (Машиниста)</td>
+			</tr>
+			<tr>
+				<th>/tr [Id Поезда] [Текст]</th>
+				<td>Сообщение для машиниста поезда с "Id Поезда", доступна только для 4, 6+ рангов на стуле в диспетчерской</td>
+			</tr>
+			<tr>
+				<th>/trainstop [Id Поезда]</th>
+				<td>Остановить поезд и выкинуть машиниста с него. Доступна только для 4, 6+ рангов на стуле в диспетчерской</td>
+			</tr>
+			<tr>
+				<th>/restrain [Id Поезда]</th>
+				<td>Зареспавнить поезд в депо, если он стоит в неположенном месте без машиниста. Доступна только для 4, 6+ рангов на стуле в диспетчерской</td>
+			</tr>
+			<tr>
+				<th>/giverank [ID] [Номер ранга]</th>
+				<td>Изменить ранг сотрудника. (Условия: 5 ранг может менять между 1 и 2 рангом; 6 ранг может менять между 3 и 4 рангом; Нельзя выдать ранг равный вашему или выше вашего. Нельзя изменить ранги, людей которые выше вас по рангу)</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+<div id="5" class="information__block">
+	
+	<span class="information__subtitle information__primary">Требования для вступления</span>
+
+	<h3 class="information__secondary">IC (РП) требования</h3>
+
+	<b>Общие требования:</b>
+	<ul>
+		<li>Опрятный внешний вид</li>
+		<li>Грамотная речь</li>
+		<li>Высокий уровень адекватности</li>
+		<li>Законопослушность</li>
+		<li>Водительское удостоверение кат. B</li>
+		<li>Знание нормативных документов фракции</li>
+		<li>Заявление на государственном портале или прохождение открытого собеседования</li>
+	</ul>
+
+	<b>Для срочной службы в армии:</b>
+	<ul>
+		<li>Проживать в Республике Провинция не менее 3 лет</li>
+	</ul>
+
+	<b>Для работы в ГУВД, ГИБДД, контрактной службы в армии:</b>
+	<ul>
+		<li>Проживать в Республике Провинция не менее 5 лет</li>
+		<li>Мужчинам иметь военный билет</li>
+		<li>Знать законодательную базу Республики Провинция (УК, КоАП, ПДД, ФЗ "О полиции")</li>
+		<li>Для МВД иметь юридическое образование</li>
+	</ul>
+
+	<b>Для работы в МЗ (ЦГБ, ОКБ):</b>
+	<ul>
+		<li>Проживать в Республике Провинция не менее 5 лет</li>
+		<li>Иметь медицинское образование</li>
+	</ul>
+
+	<b>Для работы в ОАО "РЖД":</b>
+	<ul>
+		<li>Проживать в Республике Провинция не менее 5 лет</li>
+	</ul>
+
+	<h3 class="information__secondary">OOC (вне РП) требования</h3>
+
+	<b>Общие требования:</b>
+	<ul>
+		<li>Купленный скин</li>
+		<li>Отсутствие неоплаченных штрафов и звёзд розыска</li>
+		<li>Role Play никнейм</li>
+		<li>Знание правил сервера, фракций</li>
+		<li>Знание Role Play терминов</li>
+		<li>Иметь опыт игры на Role Play проектах, во фракциях / ПГ или иметь базовые знания RP</li>
+		<li>Умение правильно пользоваться IC и OOC чатом (отсутствие MG)</li>
+		<li>Умение правильно использовать /me, /do, /try, /todo</li>
+		<li>Не находиться в общем чёрном списке фракций</li>
+		<li>Заявление на форуме (если не по набору в игре)</li>
+	</ul>
+
+	<b>Для срочной службы в армии:</b>
+	<ul>
+		<li>3+ игровой уровень</li>
+	</ul>
+
+	<b>Для работы в ГУВД, ГИБДД, МЗ, ОАО "РЖД", контрактной службы в армии:</b>
+	<ul>
+		<li>5+ игровой уровень</li>
+	</ul>
+
+</div>
+
+<div id="6" class="information__block ranks">
+	
+	<span class="information__subtitle information__primary">Звания (должности)</span>
+	<div class="information__ranks">
+		<div class="information__flex-item">
+	
+			<h3 class="information__secondary">Звания в МВД (ГУВД, ГИБДД)</h3>
+		
+			<table class="information__table ranks">
+				<thead>
+					<tr>
+						<th>Ранг</th>
+						<th>Звание</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>Рядовой</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Сержант</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>Старшина</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td>Прапорщик</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td>Лейтенант</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td>Старший лейтенант</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td>Капитан</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td>Майор</td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<td>Подполковник</td>
+					</tr>
+					<tr>
+						<th>10</th>
+						<td>Полковник</td>
+					</tr>
+					<tr>
+						<th>11</th>
+						<td>Генерал</td>
+					</tr>
+				</tbody>
+			</table>
+		
+		</div>
+		<div class="information__flex-item">
+	
+			<h3 class="information__secondary">Звания в МО (Армия)</h3>
+		
+			<table class="information__table ranks">
+				<thead>
+					<tr>
+						<th>Ранг</th>
+						<th>Звание</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>Рядовой</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Ефрейтор</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>Мл. Сержант</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td>Прапорщик</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td>Лейтенант</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td>Ст. Лейтенант</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td>Капитан</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td>Майор</td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<td>Полковник</td>
+					</tr>
+					<tr>
+						<th>10</th>
+						<td>Генерал</td>
+					</tr>
+					<tr>
+						<th>11</th>
+						<td>Маршал</td>
+					</tr>
+				</tbody>
+			</table>
+	
+		</div>
+		<div class="information__flex-item">
+		
+			<h3 class="information__secondary">Должности в МЗ (ОКБ, ЦГБ)</h3>
+		
+			<table class="information__table ranks">
+				<thead>
+					<tr>
+						<th>Ранг</th>
+						<th>Должность</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>Интерн</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Фельдшер</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>Лаборант</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td>Врач - стажер</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td>Врач - участковый</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td>Врач - терапевт</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td>Врач - хирург</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td>Заведующий отделением</td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<td>Заместитель главного врача</td>
+					</tr>
+					<tr>
+						<th>10</th>
+						<td>Главный врач</td>
+					</tr>
+				</tbody>
+			</table>
+	
+		</div>
+		<div class="information__flex-item">
+	
+			<h3 class="information__secondary">Должности в ОАО "РЖД"</h3>
+		
+			<table class="information__table ranks">
+				<thead>
+					<tr>
+						<th>Ранг</th>
+						<th>Должность</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>Слесарь-электрик</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Монтёр пути</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>Машинист</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td>Поездной диспетчер</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td>Машинист-инструктор</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td>Дорожный диспетчер</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td>Заместитель начальника депо</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td>Начальник Депо</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+</div>
+
